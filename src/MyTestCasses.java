@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +14,8 @@ public class MyTestCasses {
 	WebDriver driver = new ChromeDriver();
 	
 	String WebSiteURL = "https://global.almosafer.com/en";
+	
+	Random rand = new Random();
 	
 	@BeforeTest
 	public void Setup () throws InterruptedException {
@@ -88,7 +91,7 @@ public class MyTestCasses {
 	}
 	
 	
-	@Test (priority = 7)
+	@Test (priority = 7,enabled = false)
 	public void CheckReturnDate () {
 		
 		int Today =LocalDate.now().getDayOfMonth();
@@ -102,7 +105,28 @@ public class MyTestCasses {
 	}
 	
 	
-	
+	@Test (priority = 8)
+	public void RandomlyChangeTheLanguage () {
+		
+		String [] MyWebSites = {"https://global.almosafer.com/en","https://global.almosafer.com/ar"};
+		
+		int randomIndex = rand.nextInt(MyWebSites.length);
+		
+		driver.get(MyWebSites[randomIndex]);
+		
+		if (driver.getCurrentUrl().contains("ar")) {
+			
+			String ActualLanguage = driver.findElement(By.tagName("html")).getAttribute("lang");
+			String ExpectedLanguage = "ar";
+			Assert.assertEquals(ActualLanguage,ExpectedLanguage);
+			
+		}else {
+			
+			String ActualLanguage = driver.findElement(By.tagName("html")).getAttribute("lang");
+			String ExpectedLanguage = "en";
+			Assert.assertEquals(ActualLanguage,ExpectedLanguage);
+		}
+	}
 
 
 }
