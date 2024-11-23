@@ -5,7 +5,8 @@
     <classes>
       <class name="MyTestCasses">
         <methods>
-          <include name="ContactNumber"/>
+          <include name="CheckReturnDate"/>
+          <include name="CheckTheEnglishLanguageIsDefault"/>
           <include name="Setup"/>
         </methods>
       </class> <!-- MyTestCasses -->

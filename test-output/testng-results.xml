@@ -1,32 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="5" total="7" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-23T16:26:29 EET" name="Default suite" finished-at="2024-11-23T16:26:43 EET" duration-ms="14679">
+  <suite started-at="2024-11-23T18:36:08 EET" name="Default suite" finished-at="2024-11-23T18:36:30 EET" duration-ms="22395">
     <groups>
     </groups>
-    <test started-at="2024-11-23T16:26:29 EET" name="Default test" finished-at="2024-11-23T16:26:43 EET" duration-ms="14679">
+    <test started-at="2024-11-23T18:36:08 EET" name="Default test" finished-at="2024-11-23T18:36:30 EET" duration-ms="22395">
       <class name="MyTestCasses">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:MyTestCasses@1b765a2c]" started-at="2024-11-23T16:26:29 EET" name="Setup" finished-at="2024-11-23T16:26:42 EET" duration-ms="12898" status="PASS">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:MyTestCasses@18920cc]" started-at="2024-11-23T18:36:08 EET" name="Setup" finished-at="2024-11-23T18:36:23 EET" duration-ms="15522" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="CheckTheEnglishLanguageIsDefault()[pri:1, instance:MyTestCasses@1b765a2c]" started-at="2024-11-23T16:26:42 EET" name="CheckTheEnglishLanguageIsDefault" finished-at="2024-11-23T16:26:42 EET" duration-ms="81" status="PASS">
+        <test-method signature="CheckTheEnglishLanguageIsDefault()[pri:1, instance:MyTestCasses@18920cc]" started-at="2024-11-23T18:36:23 EET" name="CheckTheEnglishLanguageIsDefault" finished-at="2024-11-23T18:36:30 EET" duration-ms="6660" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckTheEnglishLanguageIsDefault -->
-        <test-method signature="CheckDefaultTheCurrencyIsSAR()[pri:2, instance:MyTestCasses@1b765a2c]" started-at="2024-11-23T16:26:42 EET" name="CheckDefaultTheCurrencyIsSAR" finished-at="2024-11-23T16:26:43 EET" duration-ms="1414" status="PASS">
+        <test-method signature="CheckReturnDate()[pri:7, instance:MyTestCasses@18920cc]" started-at="2024-11-23T18:36:30 EET" name="CheckReturnDate" finished-at="2024-11-23T18:36:30 EET" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckDefaultTheCurrencyIsSAR -->
-        <test-method signature="ContactNumber()[pri:3, instance:MyTestCasses@1b765a2c]" started-at="2024-11-23T16:26:43 EET" name="ContactNumber" finished-at="2024-11-23T16:26:43 EET" duration-ms="96" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ContactNumber -->
-        <test-method signature="CheckQitafLogoIsThereInTheFooter()[pri:4, instance:MyTestCasses@1b765a2c]" started-at="2024-11-23T16:26:43 EET" name="CheckQitafLogoIsThereInTheFooter" finished-at="2024-11-23T16:26:43 EET" duration-ms="100" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckQitafLogoIsThereInTheFooter -->
+        </test-method> <!-- CheckReturnDate -->
       </class> <!-- MyTestCasses -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

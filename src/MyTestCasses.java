@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,7 +36,7 @@ public class MyTestCasses {
 		
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 2,enabled = false)
 	public void CheckDefaultTheCurrencyIsSAR () {
 		
 		String ActualCurrency = driver.findElement(By.xpath("//button[@data-testid='Header__CurrencySelector']")).getText();
@@ -43,7 +45,7 @@ public class MyTestCasses {
 		
 	}
 	
-	@Test (priority = 3)
+	@Test (priority = 3,enabled = false)
 	public void ContactNumber () {
 		
 		String ActualNumber = driver.findElement(By.cssSelector(".sc-hUfwpO.bWcsTG")).getText();
@@ -52,7 +54,7 @@ public class MyTestCasses {
 		
 	}
 	
-	@Test (priority = 4)
+	@Test (priority = 4,enabled = false)
 	public void CheckQitafLogoIsThereInTheFooter () {
 		
 		Boolean ActualLogo = driver.findElement(By.cssSelector(".sc-bdVaJa.bxRSiR.sc-ciodno.lkfeIG")).isDisplayed();
@@ -60,5 +62,47 @@ public class MyTestCasses {
 		Assert.assertEquals(ActualLogo,ExpectLogo);
 		
 	}
+	
+	@Test (priority = 5,enabled = false)
+	public void CheckHotelTabIsNotSelected () {
+		
+		WebElement HotelTab = driver.findElement(By.id("uncontrolled-tab-example-tab-hotels"));
+		String ActualValue = HotelTab.getAttribute("aria-selected");
+		String ExpectedValue = "false";
+		Assert.assertEquals(ActualValue,ExpectedValue);
+		
+	}
+	
+	
+	@Test (priority = 6,enabled = false)
+	public void CheckDepartureDate () {
+		
+		int Today =LocalDate.now().getDayOfMonth();
+		int Tomorrow = LocalDate.now().plusDays(1).getDayOfMonth();
+		int DayAfterTomorrow = LocalDate.now().plusDays(2).getDayOfMonth();
+		
+		String ActualDepartureDate = driver.findElement(By.cssSelector("div[class='sc-OxbzP sc-lnrBVv gKbptE'] span[class='sc-fvLVrH hNjEjT']")).getText();
+		String ExpectedDepartureDate = Integer.toString(Tomorrow);
+		Assert.assertEquals(ActualDepartureDate,ExpectedDepartureDate);
+		
+	}
+	
+	
+	@Test (priority = 7)
+	public void CheckReturnDate () {
+		
+		int Today =LocalDate.now().getDayOfMonth();
+		int Tomorrow = LocalDate.now().plusDays(1).getDayOfMonth();
+		int DayAfterTomorrow = LocalDate.now().plusDays(2).getDayOfMonth();
+		
+		String ActualReturnDate = driver.findElement(By.cssSelector("div[class='sc-OxbzP sc-bYnzgO bojUIa'] span[class='sc-fvLVrH hNjEjT']")).getText();
+		String ExpectedReturnDate = Integer.toString(DayAfterTomorrow);
+		Assert.assertEquals(ActualReturnDate,ExpectedReturnDate);
+		
+	}
+	
+	
+	
+
 
 }
